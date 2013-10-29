@@ -10,7 +10,7 @@ This project uses a url as such: `localhost:3000/lastFMUsername` to retrieve the
 To use this, you must have both a lastFM API key: [Get here](http://www.last.fm/api)
 And a youtube API key: [Here](https://developers.google.com/youtube/v3/)
 
-Include a file called apiKey.js in a root folder above the directory of this project. eg. `home/lasTube-Node`, you would include it in `home`. Or, change:
+Include a file called apiKey.js in a root folder above the directory of this project. eg. `home/lasTube-Node`, you would include it in `home`. and change:
 
 	var FMapiKey = require('../../routes/apiKey').FMapiKey;
 	var YTapiKey = require('../../routes/apiKey').YTapiKey;
