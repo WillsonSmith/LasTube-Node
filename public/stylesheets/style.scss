@@ -1,0 +1,126 @@
+*, *:before, *:after{
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+@mixin breakpoint($point) {
+	@if $point == papa-bear {
+		@media (max-width: 1600px) { @content; }
+	}
+	@else if $point == mama-bear {
+		@media (max-width: 1250px) { @content; }
+	}
+	@else if $point == baby-bear {
+		@media (max-width: 650px)  { @content; }
+	}
+}
+
+html{
+
+	min-height: 100%;
+
+}
+body {
+
+	background-color: #efefef;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#ffffff)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, #efefef, #ffffff); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image: -moz-linear-gradient(top, #efefef, #ffffff); /* Firefox 3.6-15 */
+	background-image: -o-linear-gradient(top, #efefef, #ffffff); /* Opera 11.10-12.00 */
+	background-image: linear-gradient(to bottom, #efefef, #ffffff); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+
+	@include breakpoint(baby-bear){
+
+		background: #efefef;
+
+	}
+
+	font: sans-serif;
+	list-style-type: none;
+}
+
+h1{
+
+	text-align: center;
+
+}
+
+#container{
+
+	margin: 0 auto;
+
+}
+
+.container{
+	-moz-column-count: 4;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 10px;
+	column-count: 3;
+	column-gap: 10px;
+	width: 95%;
+	margin: 0 auto;
+
+	@include breakpoint(mama-bear){
+
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+		column-count: 3;
+
+	}
+
+	@include breakpoint(baby-bear){
+
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+
+	}
+
+	.item{
+
+		display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
+		margin: 0 0 20px 0;
+		padding: 0.3em;
+		width: 100%;
+
+		border: 1px solid #efefef;
+		background: #fff;
+
+		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+		-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+
+		@include breakpoint(baby-bear){
+
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+
+		}
+	}
+
+
+}
+
+.item p{
+
+	margin: 0;
+	padding: 0;
+
+}
+
+.item img{
+
+	width: 100%;
+
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,75 @@
+*, *:before, *:after{
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+<<<<<<< HEAD
+html{
+	min-height: 100%;
+
+}
+
+=======
+>>>>>>> parent of 5627301... style fix?
+body {
+
+	background-color: #efefef;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#ffffff)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, #efefef, #ffffff); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image: -moz-linear-gradient(top, #efefef, #ffffff); /* Firefox 3.6-15 */
+	background-image: -o-linear-gradient(top, #efefef, #ffffff); /* Opera 11.10-12.00 */
+	background-image: linear-gradient(to bottom, #efefef, #ffffff); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+
+	font: sans-serif;
+	list-style-type: none;
+}
+
+h1{
+
+	text-align: center;
+
+}
+
+.container{
+
+	margin: 0 auto;
+
+}
+
+.item{
+
+	float: left;
+	position: relative;
+	margin: 20px;
+	padding: 10px;
+
+	width: 250px;
+
+	border: 1px solid #efefef;
+	background: #fff;
+
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+
+}
+
+.item p{
+
+	margin: 0;
+	padding: 0;
+
+}
+
+.item img{
+
+	width: 100%;
+
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}

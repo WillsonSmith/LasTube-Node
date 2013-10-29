@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title + "'s top artists"
+	//p Welcome to #{title}'s top artists
+
+	div#container.container.group
+		- for artist in artists
+			div(class='item')
+				a(href= 'http://youtube.com/watch?v=' + artist.youtubeURL)
+					img(src= artist.image[3]['#text'])
+				p #{artist.name}
+				p #{artist.playcount + ' plays'}
+				//p #{artist.youtubeURL}
+
+
