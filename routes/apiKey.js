@@ -1,3 +1,5 @@
-var key = '';
+var FMkey = '';
+var YTkey = '';
 
-module.exports.apiKey = key;
+module.exports.FMapiKey = FMkey;
+module.exports.YTapiKey = YTkey;
