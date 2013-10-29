@@ -1,7 +1,8 @@
 //Routes
-var FMapiKey = require('./apiKey').FMapiKey;
-var YTapiKey = require('./apiKey').YTapiKey;
-console.log(apiKey);
+var FMapiKey = require('../../routes/apiKey').FMapiKey;
+var YTapiKey = require('../../routes/apiKey').YTapiKey;
+console.log(FMapiKey);
+console.log(YTapiKey);
 var artists,
 	username,
 	error,
