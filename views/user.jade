@@ -6,7 +6,7 @@ block content
 
 	div#container.container.group
 		- for artist in artists
-			div(class='item')
+			div(class='item', data-video-id=artist.youtubeURL)
 				a(href= 'http://youtube.com/watch?v=' + artist.youtubeURL)
 					img(src= artist.image[3]['#text'])
 				p #{artist.name}

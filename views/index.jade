@@ -2,4 +2,11 @@ extends layout
 
 block content
     h1= title
-    p Welcome to #{title}
+    div(class='containHome')
+        p Welcome to #{title}
+        form(id='selectForm')
+            input(id='selector')
+            button(type='submit') 'Get User'
+
+    script(src='/javascripts/home.js')
+
