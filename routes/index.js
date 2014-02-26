@@ -67,7 +67,7 @@ function getUser(username, callback){
 		res.render('index', { title: 'LasTube' });
 
 	};
-*/		var theData;
+*/	var theData;
 
 	myCache.get( username, function( err, value ){
 
@@ -107,7 +107,7 @@ function getUser(username, callback){
 
 				myCache.set( username, body, 604800);
 
-				if (!error){
+				if (!error && !body.error){
 
 					artists = body.topartists.artist;
 					image = artists[1].image[0];
@@ -141,6 +141,11 @@ function getUser(username, callback){
 
 					});
 
+				} else {
+
+					callback();
+					//res.render('error', { title: body.ereror});
+
 				}
 
 			});
@@ -159,7 +164,7 @@ exports.index = function(req, res){
 exports.getNamed = function(req, res){
 
 	function render(title, theartist){
-
+		console.log(title, theartist)
 		if (!title || !theartist){
 
 			res.render('error', { title: 'Error' });
